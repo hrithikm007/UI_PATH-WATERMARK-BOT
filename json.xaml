@@ -1,0 +1,308 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="json" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="868.8,4424.8" sap2010:WorkflowViewState.IdRef="json_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:i="clr-namespace:InsertImageToPDF;assembly=InsertImageToPDF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="45">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>BalaReva.Externals</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>InsertImageToPDF</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="37">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>BalaReva.Externals</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>InsertImageToPDF</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="json" sap:VirtualizedContainerService.HintSize="475.2,4360" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="JSON_INP" />
+      <Variable x:TypeArguments="njl:JObject" Name="JSON_OP" />
+      <Variable x:TypeArguments="x:String" Name="JSON_PARSE" />
+      <Variable x:TypeArguments="x:String" Name="file_id" />
+      <Variable x:TypeArguments="x:String" Name="link2" />
+      <Variable x:TypeArguments="x:String" Name="response" />
+      <Variable x:TypeArguments="x:String" Name="bot_token" />
+      <Variable x:TypeArguments="x:String" Name="JSON2_OP" />
+      <Variable x:TypeArguments="x:String" Name="JSON_IP2" />
+      <Variable x:TypeArguments="njl:JObject" Name="JSON_OP2" />
+      <Variable x:TypeArguments="x:String" Name="file_path" />
+      <Variable x:TypeArguments="x:String" Name="link3" />
+      <Variable x:TypeArguments="x:String" Name="bot2" />
+      <Variable x:TypeArguments="x:String" Name="link4" />
+      <Variable x:TypeArguments="x:String" Name="url" />
+      <Variable x:TypeArguments="x:String" Name="path" />
+      <Variable x:TypeArguments="x:String" Name="file_name" />
+      <Variable x:TypeArguments="x:String" Name="email" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://api.telegram.org/bot5064690102:AAHwbyq5fa894ILRj1XKgXzANVgMKnRuLdc/getUpdates?offset=-1" sap:VirtualizedContainerService.HintSize="433.6,59.2" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="GET" Password="[Nothing]" ResourcePath="F:\Hrithik Muttin Academic Space\007 Skills007\RPA Project\Untitled.json" TimeoutMS="75000" Username="[Nothing]">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
+    <ui:ReadTextFile Content="[JSON_INP]" DisplayName="Read Text File" FileName="F:\Hrithik Muttin Academic Space\007 Skills007\RPA Project\Untitled.json" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[JSON_OP]" JsonString="[JSON_INP]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;File ID is &quot;+JSON_OP(&quot;result&quot;).Item(0)(&quot;message&quot;)(&quot;document&quot;)(&quot;file_id&quot;).ToString]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[&quot;Email ID of Sender is &quot;+JSON_OP(&quot;result&quot;).Item(0)(&quot;message&quot;)(&quot;caption&quot;).ToString]" />
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[email]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[JSON_OP("result").Item(0)("message")("caption").ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[file_id]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[JSON_OP("result").Item(0)("message")("document")("file_id").ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[link2]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["https://api.telegram.org/bot5064690102:AAHwbyq5fa894ILRj1XKgXzANVgMKnRuLdc/getFile?file_id="+file_id]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[link2]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[link2]" />
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[bot_token]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">5064690102:AAHwbyq5fa894ILRj1XKgXzANVgMKnRuLdc</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">https://api.telegram.org/file/bot</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Bot token is &quot;+bot_token]" />
+    <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[link2]" sap:VirtualizedContainerService.HintSize="433.6,59.2" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Password="[Nothing]" ResourcePath="F:\Hrithik Muttin Academic Space\007 Skills007\RPA Project\Untitled2.json" TimeoutMS="75000" Username="[Nothing]">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
+    <ui:ReadTextFile Content="[JSON_IP2]" DisplayName="Read Text File" FileName="F:\Hrithik Muttin Academic Space\007 Skills007\RPA Project\Untitled2.json" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[JSON_OP2]" JsonString="[JSON_IP2]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[JSON_OP2(&quot;result&quot;)(&quot;file_path&quot;).ToString]" />
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[file_path]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[JSON_OP2("result")("file_path").ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[file_name]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[file_path.Split("/"c).Last]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[file_name]" />
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[path]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["/"+file_path]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[link3]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[url+bot_token+path]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Final Path to Our Document is &quot; + link3]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[link3]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="433.6,987.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="8ca4eca9-d5da-4c4a-b3e3-fc31c6a960c4" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,770.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Address and search bar'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="8ca4eca9-d5da-4c4a-b3e3-fc31c6a960c4" Text="[link3+&quot;[k(enter)]&quot;]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="226, 59, 1323, 30" ElementType="InputBox" FriendlyName="'Address and search bar'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' automationid='' /&gt;" Guid="e6c865d1-2085-4a49-b9f7-bb6f0b6a0930" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABS8AAAAiCAYAAAC+7iwwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFISURBVHhe7djBCcJQEEDBlBKJDdiCLViTN8v1HhUR8sVzfIdZGNhlO3jT+XpfAQAAAABqptPltgIAAAAA1Ezz4bgCAAAAANSM8XJehicAAAAAwK42jXKIl6/Z3gAAAAAA/yJeAgAAAABJ4iUAAAAAkCReAgAAAABJ4iUAAAAAkCReAgAAAABJ4iUAAAAAkCReAgAAAABJ4iUAAAAAkCReAgAAAABJ4iUAAAAAkCReAgAAAABJ4iUAAAAAkCReAgAAAABJ4iUAAAAAkCReAgAAAABJ4iUAAAAAkCReAgAAAABJ4iUAAAAAkCReAgAAAABJ4iUAAAAAkCReAgAAAABJ4iUAAAAAkCReAgAAAABJQ7wEAAAAAKgQLwEAAACAJPESAAAAAEgSLwEAAACApK94ubzNzx0AAAAAYE+fPvk7XgIAAAAAFBzXB0H/wWse3P01AAAAAElFTkSuQmCC" InformativeScreenshot="794d8037145551c6b9553053e977625b.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="186, 59, 41, 30" ElementType="Icon" FriendlyName="'graphic Search icon'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Search icon' role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Search icon' role='graphic' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <Delay Duration="00:00:17" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'Forward'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8ca4eca9-d5da-4c4a-b3e3-fc31c6a960c4" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="59, 56, 35, 36" ElementType="Button" FriendlyName="'Forward'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Forward' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Forward' role='push button' automationid='' check:text='Forward' /&gt;" Guid="0cc8958c-8cee-4082-9870-5e0276706737" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAoCAYAAAB99ePgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADcSURBVFhH7dTBDYQgEIXhbYoCrMM7DVAHDdiABdgADViADVgAFDCbZ7J7wo3MPhITh+Q/GYbvAL6cc3LXDKfNcNoMp81w2gyn7Tm4Uops2ybDMFS/t0bFAYbFAlJxADGB9DvHBHZ5ECxgFxxiAJtwOMB7f7kQguScv8DazF814aZpOg7SLuyvzT2rCTeOo6SUZF3Xy33Wvu/H/trcs7rdObQsywHDz7kVhrrh/oWhLjgGDNFxLBii4uZ5psEQFceEISouxkiDoS4PgpXhtBlOm+G0GU6b4bTdGOfkDYASd3PExhA6AAAAAElFTkSuQmCC" InformativeScreenshot="99c209124fed8a75e76195d0d69b9728.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="9, 56, 45, 36" ElementType="Button" FriendlyName="'Back'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Back' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Back' role='push button' automationid='' check:text='Back' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAoCAYAAABXRRJPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEWSURBVFhH7dSxCoMwFIXhvpSLu4uLD+DiJOLm4uLk4uQ7pz1yLKXcgg25uQg38COSGPJB8HGO8BrDMISiKG4XCY4wjwRHmEeCI8wjwRHmkeAI80hwxOXKsgzLsoRt28T52EjQR5yAfd+Pp7QmNhJ0Ed8AvEvrYiNBD6ENQCToIHIAEAnpEbkAiIT0iBOAP1HTNKGu68v9CyYhLaLrugMQG76X9v0VCWkRVVWFdV3fh5rn+XLTNB3fS/v+ioT01wkHwVUCYhxHcU2qSEiPQLkgJOggUA4ICXoIpA0hQReBPiF934trYiNBH4E+IdJ8bCTkQSBA2rYV52IjIR9CIxIcYR4JjjCPBEeYR4IjzCPBEeaRcGdEEZ6SaZpyUQhxlAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8ca4eca9-d5da-4c4a-b3e3-fc31c6a960c4" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="1871, 9, 58, 37" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="90eec491-1c68-44cd-92a8-6959bb5ac98f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAApCAYAAABtEppnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAECSURBVGhD7ZTRCYQwEERTgiVYiiVZkqXYgXaUuxEDoxvFQ80emx14oO58+IxJ8NSWWFlW7RC6ros10Pf9Vvwb3JgH8i6+RpQs4uIUUbKIi1NEySIuThEli7g4RZSeZp7n2DRNdsagM01THMcxO7+DmjiEzuST9NWP9Csq4hA5k39bGqjt8SP5EtJA9XDby5eSBqrigOVLSQN1cdC27fISCK5znaf5ixVPK82/fa77JOp7nH9vUEpeTXwvzc9LyKuIH0nz/G15FXFIHUkn3pZXE78ik+SHYcjO76B6uGni4hRRsoiLU0TJIi5OESWLuDhFlCzi4hRRsoiLU0TJIi6+JIQPkbAF6m5feJcAAAAASUVORK5CYII=" InformativeScreenshot="88937a35ccfa4851e6545b319b4f269c.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1814, 9, 58, 37" ElementType="Button" FriendlyName="'Restore'" FullSelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Restore' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab - Google Chrome - Hrithik' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Restore' role='push button' automationid='' check:text='Restore' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAApCAYAAABtEppnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADMSURBVGhD7dFBCgJBDAXROdrc/1ItCB9EapGB372wDDwayigEr//YZknnuu97Gb3/dCmMBhgNMBpgNMBogNEAowFGA4wGGOueDH1/A4x104OmewUYa55M9r9/YxOMNdNDspf3AIw100Oyl/cAjDXTQ7KX9wCMNdNDspf3AIw100Oyl/cAjDXTQ7KX9wCMNdNDspf3AIw100M+hz7fAGPN9JDpXhHGmidD398IowFGA4wGGA0wGmA0wGiA0QCjAUYDjAYYDTAaYPxx13oBnn0NPZo8PLkAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="1cb7dc798a7280f7005ea92719bdceb0.png" Selector="&lt;html app='chrome.exe' title='New Tab'/&gt;" Url="chrome://newtab/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <i:GeneratePDF PdfPageNumber="{x:Null}" PdfXCoordinate="{x:Null}" PdfYCoordinate="{x:Null}" DisplayName="Generate PDF" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="GeneratePDF_2" ImageFilepath="F:\Hrithik Muttin Academic Space\007 Skills007\RPA Project\227-2272918_s-creed-ezio-auditore-assassins-creed-logo-ezio (1).png" ImageHeight="100" ImageWidth="100" OutputPdfPath="[&quot;F:\Hrithik Muttin Academic Space\007 Skills007\RPA Project\&quot;+file_name]" PdfFilepath="[&quot;C:\Users\HP\Downloads\&quot;+file_name]" />
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" Body="BELOW IS THE PDF ATTACHED WATERMARKED. Thank You For Using Us" DisplayName="Send SMTP Mail Message" Email="watermarktelegram@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="hrithik@1234" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="WATERMARKED PDF FROM UI PATH" TimeoutMS="37000" To="[email]">
+      <ui:SendMail.Files>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;F:\Hrithik Muttin Academic Space\007 Skills007\RPA Project\&quot;+file_name" />
+          </InArgument>
+        </scg:List>
+      </ui:SendMail.Files>
+    </ui:SendMail>
+    <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[&quot;F:\Hrithik Muttin Academic Space\007 Skills007\RPA Project\&quot;+file_name]" />
+    <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Delete_2" Path="[&quot;C:\Users\HP\Downloads\&quot;+file_name]" />
+  </Sequence>
+</Activity>
